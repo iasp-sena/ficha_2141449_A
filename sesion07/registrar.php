@@ -59,4 +59,4 @@ function cargarDatosPersona(Persona $persona){
     $persona->setApellidos($_POST["apellidos"]);
 }
 
-header("Location: index.php");
+header("Location: regitro_persona.php");

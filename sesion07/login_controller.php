@@ -25,7 +25,7 @@ if ($accion === "ingresar") {
         if ($usuario == 'pperez' && $clave == '123456') {
             $_SESSION["usuarioSesion"] = "Pedro Pérez";
             $_SESSION["mensaje"] = "Bienvenido....";
-            $urlRedirect = "index.php";
+            $urlRedirect = "regitro_persona.php";
         } else {
             $_SESSION["mensaje"] = "Credenciales invalidas";
         }

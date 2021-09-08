@@ -50,7 +50,7 @@ CREATE TABLE IF NOT EXISTS `db_taller_equipo`.`usuarios` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE INDEX `fk_usuarios_tipos_documentos_idx` ON `db_taller_equipo`.`usuarios` (`tipo_documento_id` ASC) VISIBLE;
+CREATE INDEX `fk_usuarios_tipos_documentos_idx` ON `db_taller_equipo`.`usuarios` (`tipo_documento_id` ASC);
 
 
 -- -----------------------------------------------------
@@ -81,7 +81,7 @@ CREATE TABLE IF NOT EXISTS `db_taller_equipo`.`medicos` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE INDEX `fk_medicos_usuarios1_idx` ON `db_taller_equipo`.`medicos` (`usuario_id` ASC) VISIBLE;
+CREATE INDEX `fk_medicos_usuarios1_idx` ON `db_taller_equipo`.`medicos` (`usuario_id` ASC);
 
 
 -- -----------------------------------------------------
@@ -100,7 +100,7 @@ CREATE TABLE IF NOT EXISTS `db_taller_equipo`.`entrenadores` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE INDEX `fk_entrenadores_usuarios1_idx` ON `db_taller_equipo`.`entrenadores` (`usuario_id` ASC) VISIBLE;
+CREATE INDEX `fk_entrenadores_usuarios1_idx` ON `db_taller_equipo`.`entrenadores` (`usuario_id` ASC);
 
 
 -- -----------------------------------------------------
@@ -126,9 +126,9 @@ CREATE TABLE IF NOT EXISTS `db_taller_equipo`.`equipos` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE INDEX `fk_equipos_medicos1_idx` ON `db_taller_equipo`.`equipos` (`medico_id` ASC) VISIBLE;
+CREATE INDEX `fk_equipos_medicos1_idx` ON `db_taller_equipo`.`equipos` (`medico_id` ASC);
 
-CREATE INDEX `fk_equipos_entrenadores1_idx` ON `db_taller_equipo`.`equipos` (`entrenador_id` ASC) VISIBLE;
+CREATE INDEX `fk_equipos_entrenadores1_idx` ON `db_taller_equipo`.`equipos` (`entrenador_id` ASC);
 
 
 -- -----------------------------------------------------
@@ -159,11 +159,11 @@ CREATE TABLE IF NOT EXISTS `db_taller_equipo`.`jugadores` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE INDEX `fk_jugadores_posiciones_jugador1_idx` ON `db_taller_equipo`.`jugadores` (`posicion_id` ASC) VISIBLE;
+CREATE INDEX `fk_jugadores_posiciones_jugador1_idx` ON `db_taller_equipo`.`jugadores` (`posicion_id` ASC);
 
-CREATE INDEX `fk_jugadores_usuarios1_idx` ON `db_taller_equipo`.`jugadores` (`usuario_id` ASC) VISIBLE;
+CREATE INDEX `fk_jugadores_usuarios1_idx` ON `db_taller_equipo`.`jugadores` (`usuario_id` ASC);
 
-CREATE INDEX `fk_jugadores_equipos1_idx` ON `db_taller_equipo`.`jugadores` (`equipo_id` ASC) VISIBLE;
+CREATE INDEX `fk_jugadores_equipos1_idx` ON `db_taller_equipo`.`jugadores` (`equipo_id` ASC);
 
 
 SET SQL_MODE=@OLD_SQL_MODE;

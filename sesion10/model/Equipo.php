@@ -10,9 +10,8 @@ class Equipo {
     private $entrenador;
     private $medico;
 
-    public function __construct($nombre)
+    public function __construct()
     {
-        $this->nombre = $nombre;
         $this->jugadores = array();
     }
 
